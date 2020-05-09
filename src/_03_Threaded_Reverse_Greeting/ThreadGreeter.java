@@ -12,7 +12,7 @@ public class ThreadGreeter implements Runnable{
 	public void run() {
 		// TODO Auto-generated method stub
 		System.out.println("Hello from thread number: " + threadNumber);
-		if (threadNumber < 50) {
+		if (threadNumber <= 50) {
 			// Pass in a new object of the ThreadedGreeter class with the value of the member variable plus one.
 			ThreadGreeter tg = new ThreadGreeter(threadNumber + 1);
 			Thread g = new Thread(tg);

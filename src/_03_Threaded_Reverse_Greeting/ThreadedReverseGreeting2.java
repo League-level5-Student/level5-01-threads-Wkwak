@@ -1,6 +1,6 @@
 package _03_Threaded_Reverse_Greeting;
 
-public class ThreadedReverseGreeting {
+public class ThreadedReverseGreeting2 {
 	/*
 	 * The goal of this assignment is to create a chain of threads. Thread 1 will create Thread 2, 
 	 * Thread 2 will create Thread 3, Thread 3 will create Thread 4 and so on up to 50 threads.
@@ -33,7 +33,7 @@ public class ThreadedReverseGreeting {
 	public static void main(String[] args) {
 		//5. Create the first thread and initialize it with an object of the ThreadedGreeter class.
 		//   The ThreadedGreeter object should be initialized with 1.
-		Thread t = new Thread(new ThreadedGreeter(1));
+		Thread t = new Thread(new ThreadGreeter(1));
 		
 		//6. Start and join the thread. Did you get the required output?
 		t.start();
