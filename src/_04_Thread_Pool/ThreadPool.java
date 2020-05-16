@@ -13,12 +13,13 @@ public class ThreadPool {
 		totalThreads = i;
 		Threads = new Thread[totalThreads];
 		
+		taskQueue = new ConcurrentLinkedQueue<Task>();
+		
 		for (int j = 0; j < Threads.length; j++) {
 			Worker worker = new Worker(taskQueue);
 			Threads[j] = new Thread(worker);
 		}
-		
-		taskQueue = new ConcurrentLinkedQueue<Task>();
+	
 	}
 
 	public void addTask(Task task) {
